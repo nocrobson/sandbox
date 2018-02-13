@@ -10,6 +10,8 @@ create table USUARIO (
     USUA_STATUS VARCHAR(64),
     USUA_ROLE VARCHAR (64)
 );
+create sequence usuario_id_seq increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+alter table usuario alter column usua_id set default nextval('usuario_id_seq'::regclass);
 
 create table USUARIO_AUTENTICACAO (
     UAUT_ID INT PRIMARY KEY NOT NULL,
@@ -17,4 +19,6 @@ create table USUARIO_AUTENTICACAO (
     UAUT_DT_AUTENTICACAO TIMESTAMP,
     UAUT_TOKEN VARCHAR(256)
 );
+create sequence usuario_autenticacao_id_seq increment 1 minvalue 1 maxvalue 9223372036854775807 start 1 cache 1;
+alter table usuario_autenticacao alter column uaut_id set default nextval('usuario_autenticacao_id_seq'::regclass);
 
