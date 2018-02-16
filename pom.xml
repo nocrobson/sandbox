@@ -7,7 +7,14 @@
     <groupId>br.com.noc</groupId>
     <artifactId>SandBox</artifactId>
     <version>1.0-BETA</version>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>postgresql</groupId>
@@ -29,7 +36,17 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.2.13.Final</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>9.4.8.v20171121</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.4.8.v20171121</version>
+        </dependency>
 
     </dependencies>
-
 </project>
