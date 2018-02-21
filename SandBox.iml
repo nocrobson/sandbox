@@ -77,10 +77,8 @@
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-webapp:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-xml:9.4.8.v20171121" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlet:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-quickstart:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-jaas:9.4.8.v20171121" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-security:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-plus:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-jndi:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-jmx:9.4.8.v20171121" level="project" />
@@ -112,5 +110,8 @@
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:9.4.8.v20171121" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:9.4.8.v20171121" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlet:9.4.8.v20171121" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-security:9.4.8.v20171121" level="project" />
+    <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0" level="project" />
   </component>
 </module>

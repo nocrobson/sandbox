@@ -1,34 +1,27 @@
 package br.com.noc.sandbox;
 
-import br.com.noc.sandbox.entity.Usuario;
-import br.com.noc.sandbox.utils.EntityManagerFactory;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
 
-import javax.persistence.EntityManager;
-import java.util.Date;
 
 public class App {
 
     public static void main (String[] args) {
-        EntityManagerFactory emf = new EntityManagerFactory();
-        EntityManager entityManager = emf.createEntityManager();
-        Usuario usuario = new Usuario();
-
-        usuario.setUsuaNome("Hideo Kojima");
-        usuario.setUsuaLogin("kojima");
-        usuario.setUsuaDtCriacao(new Date());
-        usuario.setUsuaRole("OPERADOR");
-        usuario.setUsuaSenha("abc1234");
-        usuario.setUsuaStatus("ATIVO");
+        Server jettyServer = new Server(8081);
+        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS);
+        context.setContextPath("/");
+        jettyServer.setHandler(context);
 
         try {
-            entityManager.getTransaction().begin();
-            entityManager.persist(usuario);
-            entityManager.getTransaction().commit();
-            emf.killEntitySession();
-        }catch (Exception e) {
+            System.out.println("Starting server...");
+            jettyServer.start();
+            System.out.println("Server start.");
+            jettyServer.join();
+        } catch (Exception e) {
+            System.out.println("Ooops, server stopped abruptly.");
             e.printStackTrace();
-            if(entityManager.getTransaction().isActive() || entityManager.getTransaction() != null) entityManager.getTransaction().rollback();
         }
+
 
     }
 }
