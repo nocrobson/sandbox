@@ -12,9 +12,10 @@
             <li><a href="#">Solicitar Marmita</a></li>
             <li><a href="#">Gerenciar Marmitas</a></li>
             <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
+            
           </ul>
         </div>
-      </nav>
+      </nav>      
     </div>
   </div>
 </template>

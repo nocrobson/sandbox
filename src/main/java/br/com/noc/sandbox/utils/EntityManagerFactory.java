@@ -7,7 +7,9 @@ public class EntityManagerFactory {
     private static EntityManager em;
 
     public EntityManager createEntityManager() {
-        if(em == null) em = Persistence.createEntityManagerFactory("SandBoxPU").createEntityManager();
+        if(em == null)
+            em = Persistence.createEntityManagerFactory("SandBoxPU").createEntityManager();
+
         return em;
     }
 
