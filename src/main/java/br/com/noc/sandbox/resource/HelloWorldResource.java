@@ -14,6 +14,7 @@ public class HelloWorldResource {
     public Response getMsg(@PathParam("nome") String nome) {
         String output = "Hello " + nome;
         return Response.status(200).entity(output).build();
+
     }
 
 }
